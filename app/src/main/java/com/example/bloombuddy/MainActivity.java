@@ -1,9 +1,12 @@
 package com.example.bloombuddy;
 
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -17,6 +20,11 @@ import androidx.navigation.ui.NavigationUI;
 import com.example.bloombuddy.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
+    Button selectBtn;
+    Button predictBtn;
+    TextView result;
+    ImageView imageView;
+    Bitmap bitmap;
 
     private EditText editTextUsername, editTextPassword;
     private Button buttonLogin;
@@ -59,6 +67,10 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_main);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
+        selectBtn=findViewById(R.id.selectBtn);
+        predictBtn=findViewById(R.id.predictBtn);
+        result=findViewById(R.id.result);
+        imageView=findViewById(R.id.imageView5);
     }
 
 }
